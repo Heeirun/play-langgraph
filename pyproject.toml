@@ -1,0 +1,20 @@
+[project]
+name = "play-langgraph"
+version = "0.1.0"
+description = "Playing with LanGraph"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "grandalf>=0.8",
+    "ipython>=8.32.0",
+    "langchain-anthropic>=0.3.7",
+    "langgraph>=0.2.72",
+    "langsmith>=0.3.8",
+    "python-dotenv>=1.0.1",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/play_langgraph"]
+
+[project.scripts]
+play-langgraph = "play_langgraph.main:main"
